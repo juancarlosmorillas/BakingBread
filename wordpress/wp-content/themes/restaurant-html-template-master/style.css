@@ -1,0 +1,613 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700|Quicksand:300,400,500,700|Shadows+Into+Light+Two');
+@import url('css/owl.carousel.css');
+@import url('css/bootstrap.min.css');
+@import url('https://use.fontawesome.com/releases/v5.0.7/css/all.css');
+@import url('css/animate.min.css');
+@import url('css/main.css');
+@import url('css/responsive.css');
+@import url('less/main.css');
+@import url('less/responsive.css');
+
+/*OTRO TEMA*/
+
+@import url('css/normalize.css');
+@import url('css/style-portfolio.css');
+@import url('css/jquery-ui.css');
+@import url('css/picto-foundry-food.css');
+@import url('css/bootstrap.css');
+@import url('css/chocolat.css');
+@import url('css/style.css');
+
+@font-face{
+    font-family: Title;
+    src: url('fonts/catamaran/Catamaran-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: Title-bold;
+    src: url('fonts/catamaran/Catamaran-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: Title-black;
+    src: url('fonts/catamaran/Catamaran-Black.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+p{
+    font-size: 1.05em !important;
+}
+
+a{
+   font-size: 1.05em !important; 
+}
+
+/* Pagination */
+.pagination h2{
+    display: none;
+}
+
+.pagination{
+    display: flex;
+    justify-content: center;
+    font-family: Title-bold;
+}
+
+.nav-links span{
+    font-size: 1.5em;
+}
+
+.nav-links a{
+    font-size: 1.5em;
+}
+
+/* nav.php */
+.logo-nav{
+    width: 100%;
+    margin-top: -12%;
+}
+
+li.active{
+    background-color: transparent !important;
+}
+
+/* index.php */
+
+.index-content p{
+    color: #686868 !important;
+    font-family: Title;
+}
+
+/* Contents */
+
+.stamp{
+    position: absolute;
+    width: 15% !important;
+    margin-left: 2% !important;
+    margin-top: 2% !important;
+    transform: rotate(20deg);
+}
+
+.dif-par{
+    background-color: rgba(20, 20, 20, 0.7) !important;
+}
+
+.dif-impar{
+    background-color: rgba(45, 45, 45, 0.7) !important;
+}
+
+.cosica{
+    color: white !important;
+}
+
+/* Single.php */
+.title-link{ /* Enlaces más vistosos */
+    color: #515151 !important;
+}
+
+.title-link:hover{
+    color: black !important;
+}
+
+.main-excerpt{ /* Margen del top entre la imagen destacada y el excerpt */
+    margin-top: 2%;
+}
+
+.single-calendar{
+    color: black;
+}
+
+.single-info{
+    color: #686868 !important;
+}
+
+.single-content p{
+    color: #686868 !important;
+    font-family: Title;
+}
+
+.heading h3{
+    background-color: transparent;
+    border: 3px solid #996d15;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-radius: 0px;
+    color: #996d15 !important;
+}
+
+.avatar-single img{
+    width: 44px;
+    border-radius: 50%;
+}
+
+/* Sidebar.php */
+.sectiontitle{ /* Bloqueamos el titulo del widget por defecto */
+    display: none;
+}
+
+.lists-side h3{ /* Margen del top entre listas y cabeceras */
+    margin-bottom: 8%;
+}
+
+.lists-side li{ /* Decoración de las listas */
+    list-style: none;
+}
+
+.lists-side li a{ /* Tamaño de los elementos de las listas */
+    font-size: 1.2em;
+}
+
+.list-num{ /* Decoración de los números de las listas */
+    font-size: 1em !important;
+    color: #515151 !important;
+}
+
+.sidebar-button{
+    background-color: #996d15 !important;
+    transition: 0.5s;
+}
+
+.sidebar-button:hover{
+    background-color: #a57921 !important;
+    transition: 0.5s;
+}
+
+.heading::before{ /*Quitamos el hr que aparece siempre en el sidebar*/
+    width: 0px !important;
+}
+
+.about-right{
+    text-align: left !important;
+}
+
+.list-margin li{
+    margin-left: 18% !important;
+}
+
+/* Comments section */
+
+#comment{ /* Tamaño del textarea */
+    width: 100%;
+    height: 20%;
+}
+
+.comment-form-comment{ /* Poner el label del textarea de comentario en columna */
+    display: flex;
+    flex-flow: column;
+}
+
+.comment{
+    list-style: none;
+}
+
+#submit{ /* Color de la palabra del boton de comment */
+    color:black;
+}
+
+#commentform{ /* Margen abajo para separar el footer */
+    padding-bottom: 5%;
+}
+
+/* front-page.php */
+
+.flags{
+    position: relative;
+    z-index: 1000;
+}
+
+.content-link{
+    color: #337ab7 !important;
+    transition: 0.8s;
+}
+
+.content-link:hover{
+    color: rgb(233,124,10) !important;
+    transition: 0.8s;
+}
+
+#subscribe .block form .input-group-addon button{
+    background-color: #996d15 !important;
+}
+
+#contact-us .block a{
+    background-color: #996d15 !important;
+}
+
+.colored{
+    color: #996d15 !important;
+}
+
+.footer-post-link:hover{
+    color: #725211 !important;
+}
+
+.social-media-img{
+    width: 20px;
+}
+
+#footer .block .social-media-link ul li a:hover{
+    background-color: #996d15 !important;
+}
+
+.main-photo{
+    width:100%;
+}
+
+.front-page-pic{
+    width: 100% !important;
+}
+
+#blog .block ul li .content-right{/* Arreglamos el problema de los div para el front-page  */
+    padding: 40px 25px 23px !important;
+}
+
+li.especial:hover{/* Bloqueamos el transform rotate de los posts destacados */
+    transform: rotate(0deg) !important;
+}
+
+.especial{
+    height: 350px !important;
+}
+
+.content-extra i img{
+    margin-top: 5% !important;
+}
+
+/* Search.php */
+.search-title{
+    text-align: center;
+}
+
+.result-table{
+    width: 100%;
+}
+
+.par{
+    background-color: #f2f2f2;
+}
+
+.impar{
+    background-color: #e5e5e5;
+}
+
+
+.blog-404{
+    margin-top: -15px;
+    padding-bottom: 0px !important;
+    padding-top: 0px !important;
+    background: none !important;
+    overflow-x: hidden;
+}
+
+.blog-404::before{
+    background: none !important;
+}
+
+#blog.not-found::before{
+    height: 90% !important;
+}
+
+.not-found{
+    width: 100%;
+    height: 100%;
+}
+
+/* Archives.php */
+
+.main-title{
+    padding-top: 5%;
+    margin-left: 40%;
+}
+
+.lists-side h4{
+    border-bottom: 3px solid #996d15;
+    border-width: 33%;
+}
+
+.display-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.second-row{
+    padding-left: 20%;
+}
+
+.third-row{
+    padding-left: 20%;
+}
+
+/* author.php */
+.profile-pic{
+    width: 100%;
+    height: 400px;
+    background-color: red;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.description-author{
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+    padding-bottom: 5% !important;
+}
+
+.description-author p{
+    margin: 0 auto;
+}
+
+.circle{
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #996d15;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.social-author{
+    width: 44px;
+    height: 44px;
+}
+
+.title-author{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    padding-top: 5% !important;
+}
+
+.avatar-author img{
+    width: 64px;
+    border-radius: 50%;
+}
+
+.icons-author{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-author{
+    width: 44px !important;
+}
+
+
+/*Canvas*/
+#doughnut,#doughnut2,#doughnut3,#doughnut4{
+  position: absolute;
+}
+
+#skill1,#skill2,#skill3,#skill4{
+  position: relative;
+}
+
+.skill-place{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.skill-title{
+    padding-bottom: 20px;
+}
+
+.skills{
+    display: flex;
+    width: 100%;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* pagination */
+
+.boton-pag{
+    font-family: Title;
+    background-color: #996d15 !important;
+    color: white;
+    border: 0px;
+    transition: 0.5s;
+}
+
+.boton-pag:hover{
+    background-color: #a57921 !important;
+    transition: 0.5s;
+}
+
+#commentform p{
+    font-family: Title !important;
+}
+
+.loggin-in-as{
+    font-family: Title !important;
+}
+
+#comment{
+    width: 80% !important;
+    height: 200px !important;
+}
+
+.comment-body p{
+    font-family: Title !important;
+    color: black !important;
+}
+
+.comment-body a{
+    font-size: 0.9em !important;
+}
+
+.avatar-32{
+    width: 32px !important;
+}
+/*--------------------------------------------------------------------------------------------------*/
+/* Enlaces varios */
+.cat-item a{
+    color: #996d15 !important;
+    transition: 0.5s;
+}
+
+.cat-item a:hover{
+    color: #a57921 !important;
+    transition: 0.5s;
+}
+
+.nuevos-enlaces div h2 a{
+    color: #996d15 !important;
+    transition: 0.5s;
+}
+
+.nuevos-enlaces div h2 a:hover{
+    color: #a57921 !important;
+    transition: 0.5s;
+}
+
+.nuevos-enlaces li a{
+    color: #996d15 !important;
+    transition: 0.5s;
+}
+
+.nuevos-enlaces li a:hover{
+    color: #a57921 !important;
+    transition: 0.5s;
+}
+
+.nuevos-enlaces i a{
+    color: #996d15 !important;
+    transition: 0.5s;
+}
+
+.nuevos-enlaces i a:hover{
+    color: #a57921 !important;
+    transition: 0.5s;
+}
+
+.nuevos-enlaces a{
+    color: #996d15 !important;
+    transition: 0.5s;
+}
+
+.nuevos-enlaces a:hover{
+    /*color: #a57921 !important;*/
+    color: rgb(233,124,10);
+    transition: 0.5s;
+}
+
+.nuevos-enlaces h5 a{
+    color: #996d15 !important;
+    transition: 0.5s;
+}
+
+.nuevos-enlaces h5 a:hover{
+    color: #a57921 !important;
+    transition: 0.5s;
+}
+
+.nav-links a{
+    color: #996d15 !important;
+    transition: 0.5s;
+}
+
+.nav-links a:hover{
+    color: #a57921 !important;
+    transition: 0.5s;
+}
+
+.nuevos-enlaces a h1{
+    color: #996d15 !important;
+    transition: 0.5s;
+}
+
+.nuevos-enlaces a h1:hover{
+    color: #a57921 !important;
+    transition: 0.5s;
+}
+
+.nuevos-enlaces a h3{
+    color: #996d15 !important;
+    transition: 0.5s;
+}
+
+.nuevos-enlaces a h3{
+    color: #a57921 !important;
+    transition: 0.5s;
+}
+
+/* Letra y Color*/
+.title-font{
+    font-family: Title !important;
+}
+
+.title-bold-font{
+    font-family: Title-bold !important;
+}
+
+.title-black-font{
+    font-family: Title-black !important;
+}
+
+.title span{
+    color: #996d15 !important;
+}
+
+.heading span{
+    color: #996d15 !important;
+}
+
+.active{
+    background-color: #996d15 !important;
+}
+
+#myCanvasContainer{
+    width: 75% !important;
+    margin: 0 auto !important;
+}
+
+td{
+    padding-left: 15px !important;
+}
+
+body{
+    position: relative;
+    min-height: 100vh;
+}
+
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.mb50{
+    margin-bottom: 50px;
+}

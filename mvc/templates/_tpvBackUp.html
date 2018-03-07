@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Admin Area Baking Bread</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="templates/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="templates/vendor/stylo.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="templates/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="templates/dist/css/sb-admin-2.css" rel="stylesheet">
+    <link href="templates/dist/css/setting.css" rel="stylesheet" type="text/css">
+
+    <!-- Morris Charts CSS -->
+    <!-- <link href="templates/vendor/morrisjs/morris.css" rel="stylesheet"> -->
+
+    <!-- Custom Fonts -->
+    <link href="templates/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.php"><img src="templates/images/logo-admin3.png"></a>
+            </div>
+            <!-- /.navbar-header -->
+
+             <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="index.php?ruta=member&accion=dologout"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul> 
+            <!-- /.navbar-top-links -->
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li>
+                            <a href="index.php"><i class="fa fa-home fa-fw"></i> Home</a>
+                        </li>
+                        <li>
+                            <a id="tpvlink" href="index.php?ruta=product&accion=vertpv"><i class="fa fa-desktop fa-fw"></i> TPV</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-users fa-fw"></i> Clients<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="index.php?ruta=client&accion=listclient">Clients List</a>
+                                </li>
+                                <li>
+                                    <a href="index.php?ruta=client">New Client</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        {{addMiembro}}
+                        <li>
+                            <a href="#"><i class="fa fa-shopping-cart fa-fw"></i> Products<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="index.php?ruta=product&accion=listproduct">Products List</a>
+                                </li>
+                                <li>
+                                    <a href="index.php?ruta=product"> New Product</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-money fa-fw"></i>Bills - Facturas<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="#">(?)</a>
+                                </li>
+                                <li>
+                                    <a href="#">(?)</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="index.php?ruta=member&accion=dologout"><i class="fa fa-power-off fa-fw"></i> Cerrar Sesión</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div id="ticketHeader" class="col-lg-12">
+                    <!--<h1 class="page-header">TPV</h1>-->
+                    <h3>Cliente: <span class="ml15 mr15"></span></h3>
+                    <span id="test"></span>
+                </div>
+            </div>
+            <!-- /.row -->
+            <!-- /.row -->
+            <div class="row">
+                <div id="caja" class="container-fluid">
+                    <div id="caja1" class="col-lg-6 col-md-6 col-xs-12  hp-100 min-h max-h "><!-- Tocar  -->
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-xs-12">
+                                <h2 id="pprecio" class="pprecio">Total: <span>0.00</span> €</h2>
+                            </div>
+                        </div>
+                        <div class="row"> <!-- Body del TPV aka Tablita -->
+                            <div id="tablita" class="col-lg-12 col-md-12 col-xs-12">
+                                <div class="table-responsive">
+                                    <table id="compra" class="table table-striped table-bordered table-hover">
+                                        <thead>
+                                            <tr>
+                                                <td>Código</td>
+                                                <td>Descripción</td>
+                                                <td>Cantidad</td>
+                                                <td>Precio</td>
+                                                <td>Subtotal (€)</td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="bodyCompra">
+                                        </tbody>
+                                    </table>                                    
+                                </div>
+                            </div>
+                        </div> <!-- Fin de la tabla -->
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-xs-12">
+                                <div class="col-lg-3 col-md-6 col-xs-12 mt25">
+                                    <button id="btnGuardarFuera" class="btn btn-large btn-block btn-primary" data-toggle="modal" data-target="#modalGuardar">Guardar Ticket</button>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-xs-12 mt25">
+                                    <button class="btn btn-large btn-block btn-primary" id="bapuntar" data-toggle="modal" data-target="#modalApuntar">Apuntar Ticket</button>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-xs-12 mt25">
+                                    <button class="btn btn-large btn-block btn-primary" data-toggle="modal" data-target="#modalNew">Nuevo Ticket</button>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-xs-12 mt25">
+                                    <button class="btn btn-large btn-block btn-primary ">Facturar Ticket</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="caja2" class="col-lg-6 col-md-6 col-xs-12 min-h max-h "> <!--   -->
+                        <div class="row">
+                            <div id="fotosTPV" class="col-lg-12 col-md-12 col-xs-12 mt20" >
+                                {{fotos}}    
+                            </div>
+                        </div>
+        
+                        <div class="row pb30">
+                            <div class="col-lg-3 col-md-6 col-xs-6 mt20">
+                                <button id="btnPan" class="btn btn-warning btn-lg btn-block"> Pan</button>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-xs-6 mt20">
+                                <button id="btnCroissants" class="btn btn-success btn-lg btn-block"> Croissants</button>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-xs-6 mt20">
+                                <button id="btnNavidad" class="btn btn-info btn-lg btn-block"> Navidad</button>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-xs-6 mt20">
+                                <button id="btnOtros" class="btn btn-danger btn-lg btn-block"> Otros</button>
+                            </div>
+                        </div>
+                    </div> <!-- #fotosTPV -->
+                    
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /#page-wrapper -->
+        
+	    <!-- Modal Apuntar -->
+        <div id="modalApuntar" class="modal" role="dialog">
+          <div class="modal-dialog modal-tpv">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Apuntar Ticket</h4>
+              </div>
+              <div class="modal-body">
+                <form method="POST">
+                  
+                  <input type="search" id="vBusqueda" placeholder="Buscar cliente (TIN)" class="form-control" ><br>
+                  <input id="btnSearch" type="button" value="Buscar" class="btn btn-info btn-block">
+                </form>
+                <div class="row">
+                    <div id="tableCTPV" class="col-lg-12 col-md-12 col-xs-12">
+                    </div>
+                </div>
+                
+                <!--<div class="row">
+                    <div class="form-group mt20">
+                        <button id="prueba" class="btn btn-primary pull-left ml100"> Guardar ticket </button>
+                        <button class="btn btn-primary pull-right mr100"> Facturar ticket </button>
+                    </div>
+                </div> -->
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Fin Modal Apuntar -->
+        
+	    <!-- Modal Guardar -->
+        <div id="modalGuardar" class="modal" role="dialog">
+          <div class="modal-dialog modal-tpv">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Guardar Ticket</h4>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+                    <div id="tableCompra" class="col-lg-12 col-md-12 col-xs-12">
+                        {{carrito}}
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-xs-12 mt50">
+                        
+                            <input type="hidden" name="idcliente" id="test" value="">
+                            <button id="btnSave" class="btn btn-primary btn-block" >Guardar Ticket</button>
+                        
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-xs-12 mt50">
+                        <button class="btn btn-default btn-block" data-dismiss="modal"> Seguir Comprando </button>
+                    </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Fin Modal Guardar -->
+        
+	    <!-- Modal Nuevo Ticket -->
+        <div id="modalNew" class="modal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title" id="titulo">Nuevo Ticket</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form method="POST" action="?ruta=product&accion=newticket">
+                            <p>¿Seguro que deseas un nuevo ticket?</p>
+                            <input id="newTicket" type="submit" class="btn btn-success" value="Si">
+                            <button class="btn btn-danger" data-dismiss="modal">No</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fin Modal Nuevo Ticket -->    
+        
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="templates/vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="templates/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="templates/vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="templates/dist/js/sb-admin-2.js"></script>
+    <script src="templates/js/form.js"></script>
+    <script src="templates/js/scripts.js"></script>
+</body>
+
+</html>

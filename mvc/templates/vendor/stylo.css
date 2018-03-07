@@ -1,0 +1,86 @@
+.imgproduct{
+    width:50%;
+    height:20%;
+}
+.nologin{
+    background:url(fondoLogin2.jpg);
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+
+@media(max-width:768px){
+    
+.nologin{
+    background:url(lognmovil.png);
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+    
+}
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+.inputfile + label {
+    max-width: 80%;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    padding: 0.625rem 1.25rem;
+}
+
+.inputfile + label svg {
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    fill: currentColor;
+    margin-top: -0.25em;
+    margin-right: 0.25em;
+}
+
+.foto {
+    cursor:pointer;
+	font-size: 1em;
+    position:relative;
+    left: 50px;
+	font-weight:normal;
+	font-family: 'arial';
+}
+
+.foto:hover{
+    text-decoration:underline;
+}
+
+.error {
+    border-color: red;
+}
+.span {
+    
+    width: 20px;
+    margin-left: 5%;
+    font-size: 1em;
+    color: red;
+}
+
+.span2{
+    font-style: italic;
+    width: 20px;
+    font-size: 1em;
+    color: red;
+}
+
+.spanblack{
+    font-style: italic;
+    font-weight:bold;
+    width: 20px;
+    font-size: 0.9em;
+    color: gray;
+}
